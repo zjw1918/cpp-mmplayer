@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.2)
+project(MMPlayer)
+
+set(SOURCE_FILES MMPlayer.cpp)
+
+add_executable(MMPlayer ${SOURCE_FILES})
+# target_link_libraries(MMPlayer division)
+# install(TARGETS divider DESTINATION ${DIVISIBLE_INSTALL_BIN_DIR})
