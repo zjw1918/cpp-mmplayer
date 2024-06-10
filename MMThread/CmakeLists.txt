@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(MMThread)
+
+set(SOURCE_FILES MMThread.cpp)
+
+add_library(MMThread ${SOURCE_FILES})

@@ -1,8 +1,21 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 3.10)
 project(MMPlayer)
 
 set(SOURCE_FILES MMPlayer.cpp)
 
+include_directories(../)
+# include_directories(../3rdpart/ffmpeg/include)
+
+link_directories(../3rdpart/ffmpeg/lib)
+
 add_executable(MMPlayer ${SOURCE_FILES})
-# target_link_libraries(MMPlayer division)
+target_link_libraries(
+    MMPlayer 
+    
+    MMThread
+    MMAV
+
+    avcodec avdevice avfilter avformat 
+    avutil swresample swscale
+)
 # install(TARGETS divider DESTINATION ${DIVISIBLE_INSTALL_BIN_DIR})
